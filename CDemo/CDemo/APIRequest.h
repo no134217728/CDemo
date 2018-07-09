@@ -10,6 +10,6 @@
 
 @interface APIRequest : NSObject
 
-- (void)requestDemoDataFromOpenDataServerUrl:(NSString *)requestURL block:(void (^)(NSDictionary *result))callback;
+- (void)requestDemoDataFromOpenDataServerLimit:(int)limit offset:(int)offset block:(void (^)(BOOL isSuccess, NSDictionary *result))callback;
 
 @end
