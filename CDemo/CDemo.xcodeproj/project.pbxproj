@@ -13,6 +13,7 @@
 		1AF7B25320F37B9000719028 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1AF7B25220F37B9000719028 /* Assets.xcassets */; };
 		1AF7B25620F37B9000719028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF7B25420F37B9000719028 /* LaunchScreen.storyboard */; };
 		1AF7B25920F37B9000719028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B25820F37B9000719028 /* main.m */; };
+		1AF7B26120F3900400719028 /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B26020F3900400719028 /* APIRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		1AF7B25520F37B9000719028 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1AF7B25720F37B9000719028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AF7B25820F37B9000719028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AF7B25F20F3900400719028 /* APIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
+		1AF7B26020F3900400719028 /* APIRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				1AF7B24A20F37B8B00719028 /* AppDelegate.m */,
 				1AF7B24C20F37B8B00719028 /* ViewController.h */,
 				1AF7B24D20F37B8B00719028 /* ViewController.m */,
+				1AF7B25F20F3900400719028 /* APIRequest.h */,
+				1AF7B26020F3900400719028 /* APIRequest.m */,
 				1AF7B24F20F37B8B00719028 /* Main.storyboard */,
 				1AF7B25220F37B9000719028 /* Assets.xcassets */,
 				1AF7B25420F37B9000719028 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			files = (
 				1AF7B24E20F37B8B00719028 /* ViewController.m in Sources */,
 				1AF7B25920F37B9000719028 /* main.m in Sources */,
+				1AF7B26120F3900400719028 /* APIRequest.m in Sources */,
 				1AF7B24B20F37B8B00719028 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = CDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
