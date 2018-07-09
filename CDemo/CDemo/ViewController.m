@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // 弄掉 navbar 下的黑線
+    self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
 }
 
 
