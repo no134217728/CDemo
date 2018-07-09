@@ -39,7 +39,6 @@
     [api requestDemoDataFromOpenDataServerLimit:30 offset:offset block:^(BOOL isSuccess, NSDictionary *result) {
         if (isSuccess) {
             [weakSelf.resultArray addObjectsFromArray:(NSArray *)result[@"result"][@"results"]];
-            NSLog(@"weakSelf.resultArray: %@", weakSelf.resultArray);
             weakSelf.page++;
             [self->mainTableView reloadData];
         } else {
@@ -52,7 +51,7 @@
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cells"];
     
-    cell.parkName.text = [NSString stringWithFormat:@"公園：%@", _resultArray[indexPath.row][@"ParkName"]];
+    cell.parkName.text = [NSString stringWithFormat:@"公園：%@ %ld", _resultArray[indexPath.row][@"ParkName"], (long)indexPath.row];
     cell.parkDescription.text = [NSString stringWithFormat:@"%@", _resultArray[indexPath.row][@"Introduction"]];
 //    cell.parkImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", _resultArray[indexPath.row][@"Image"]]]]];
     
@@ -64,7 +63,9 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if (indexPath.row >= _resultArray.count - 1) {
+        [self requestFromAPIPage:_page];
+    }
 }
 
 @end
