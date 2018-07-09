@@ -14,6 +14,7 @@
 		1AF7B25620F37B9000719028 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AF7B25420F37B9000719028 /* LaunchScreen.storyboard */; };
 		1AF7B25920F37B9000719028 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B25820F37B9000719028 /* main.m */; };
 		1AF7B26120F3900400719028 /* APIRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B26020F3900400719028 /* APIRequest.m */; };
+		1AF7B26920F3AD6800719028 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B26820F3AD6800719028 /* MainTableViewCell.m */; };
 		9E411F1629DBEC0AE406F626 /* libPods-CDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A10D06B442C0145A96E45 /* libPods-CDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,8 @@
 		1AF7B25820F37B9000719028 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1AF7B25F20F3900400719028 /* APIRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIRequest.h; sourceTree = "<group>"; };
 		1AF7B26020F3900400719028 /* APIRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIRequest.m; sourceTree = "<group>"; };
+		1AF7B26720F3AD6800719028 /* MainTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewCell.h; sourceTree = "<group>"; };
+		1AF7B26820F3AD6800719028 /* MainTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewCell.m; sourceTree = "<group>"; };
 		90C98FAAEA7699CFA9800304 /* Pods-CDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDemo/Pods-CDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C662779798B75C0821D0D256 /* Pods-CDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDemo/Pods-CDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F60A10D06B442C0145A96E45 /* libPods-CDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +75,8 @@
 				1AF7B24A20F37B8B00719028 /* AppDelegate.m */,
 				1AF7B24C20F37B8B00719028 /* ViewController.h */,
 				1AF7B24D20F37B8B00719028 /* ViewController.m */,
+				1AF7B26720F3AD6800719028 /* MainTableViewCell.h */,
+				1AF7B26820F3AD6800719028 /* MainTableViewCell.m */,
 				1AF7B25F20F3900400719028 /* APIRequest.h */,
 				1AF7B26020F3900400719028 /* APIRequest.m */,
 				1AF7B24F20F37B8B00719028 /* Main.storyboard */,
@@ -196,6 +201,7 @@
 				1AF7B25920F37B9000719028 /* main.m in Sources */,
 				1AF7B26120F3900400719028 /* APIRequest.m in Sources */,
 				1AF7B24B20F37B8B00719028 /* AppDelegate.m in Sources */,
+				1AF7B26920F3AD6800719028 /* MainTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -62,37 +63,59 @@
                                 <rect key="frame" x="0.0" y="117" width="375" height="486"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cells" rowHeight="147" id="oH0-Pd-ak7">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="147"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cells" rowHeight="152" id="oH0-Pd-ak7" customClass="MainTableViewCell">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="152"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oH0-Pd-ak7" id="ekH-ci-o2V">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="151.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-kl-XvC" userLabel="parkName">
-                                                    <rect key="frame" x="10" y="10" width="355" height="21"/>
+                                                    <rect key="frame" x="20" y="10" width="345" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="fmK-UZ-pPd"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="710-79-QTp" userLabel="parkDescription">
-                                                    <rect key="frame" x="10" y="41" width="355" height="81.5"/>
+                                                    <rect key="frame" x="20" y="41" width="345" height="100.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZp-xJ-D1w">
+                                                    <rect key="frame" x="10" y="76" width="0.0" height="0.0"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="MZp-xJ-D1w" secondAttribute="height" multiplier="1:1" id="U00-HB-XPC"/>
+                                                        <constraint firstAttribute="width" id="d83-Nu-dci"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="710-79-QTp" firstAttribute="trailing" secondItem="3DS-kl-XvC" secondAttribute="trailing" id="52E-bR-7gT"/>
                                                 <constraint firstItem="710-79-QTp" firstAttribute="leading" secondItem="3DS-kl-XvC" secondAttribute="leading" id="dNk-ah-ouT"/>
-                                                <constraint firstItem="3DS-kl-XvC" firstAttribute="leading" secondItem="ekH-ci-o2V" secondAttribute="leading" constant="10" id="dlI-uO-oRg"/>
                                                 <constraint firstAttribute="trailing" secondItem="3DS-kl-XvC" secondAttribute="trailing" constant="10" id="erm-eC-GEz"/>
                                                 <constraint firstItem="3DS-kl-XvC" firstAttribute="top" secondItem="ekH-ci-o2V" secondAttribute="top" constant="10" id="oOJ-Ef-i58"/>
+                                                <constraint firstItem="MZp-xJ-D1w" firstAttribute="centerY" secondItem="ekH-ci-o2V" secondAttribute="centerY" id="pTf-O9-gBY"/>
+                                                <constraint firstAttribute="bottom" secondItem="710-79-QTp" secondAttribute="bottom" constant="10" id="uuw-se-1pe"/>
+                                                <constraint firstItem="MZp-xJ-D1w" firstAttribute="trailing" secondItem="3DS-kl-XvC" secondAttribute="leading" constant="-10" id="v8X-rh-8Zx"/>
                                                 <constraint firstItem="710-79-QTp" firstAttribute="top" secondItem="3DS-kl-XvC" secondAttribute="bottom" constant="10" id="w4X-ms-pvI"/>
+                                                <constraint firstItem="MZp-xJ-D1w" firstAttribute="leading" secondItem="ekH-ci-o2V" secondAttribute="leading" constant="10" id="yHL-1b-HJK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="parkDescription" destination="710-79-QTp" id="mwj-AY-yDZ"/>
+                                            <outlet property="parkImage" destination="MZp-xJ-D1w" id="29r-vW-hOZ"/>
+                                            <outlet property="parkName" destination="3DS-kl-XvC" id="I7S-k5-har"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XU2-gV-rIo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="gq0-XT-fBb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,6 +131,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="NaviBar" id="m1M-e5-RCq"/>
+                    <connections>
+                        <outlet property="mainTableView" destination="j6I-F9-Gmg" id="SDo-Ef-Gd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
