@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource>
 
+@property NSMutableArray *resultArray;
+@property int page;
 
 @end
 
