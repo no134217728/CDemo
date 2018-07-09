@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "APIRequest.h"
 
 @interface ViewController ()
 
@@ -19,6 +20,11 @@
     
     // 弄掉 navbar 下的黑線
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
+    
+    APIRequest *api = [[APIRequest alloc] init];
+    [api requestDemoDataFromOpenDataServerUrl:@"http://data.taipei/opendata/datalist/apiAccess?scope=resourceAquire&rid=bf073841-c734-49bf-a97f-3757a6013812" block:^(NSDictionary *result) {
+        NSLog(@"%@", result);
+    }];
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {

@@ -10,4 +10,6 @@
 
 @interface APIRequest : NSObject
 
+- (void)requestDemoDataFromOpenDataServerUrl:(NSString *)requestURL block:(void (^)(NSDictionary *result))callback;
+
 @end
