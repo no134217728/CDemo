@@ -9,10 +9,10 @@
 #import "ViewController.h"
 #import "MainTableViewCell.h"
 #import "APIRequest.h"
+#import "DemoManager.h"
 
 @interface ViewController () {
-    APIRequest *api;
-    
+    DemoManager *manager;
     __weak IBOutlet UITableView *mainTableView;
 }
 
@@ -22,30 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    manager = [[DemoManager alloc] init];
+    
     _resultArray = [[NSMutableArray alloc] init];
     _page = 0;
     
     // 弄掉 navbar 下的黑線
     self.navigationController.navigationBar.shadowImage = [[UIImage alloc] init];
     
-    api = [[APIRequest alloc] init];
-    [self requestFromAPIPage:_page];
+    [manager requestFromAPIPage:_page];
 }
 
-- (void)requestFromAPIPage:(int)page {
-    int offset = page * 30;
-    
-    __typeof__(self) __weak weakSelf = self;
-    [api requestDemoDataFromOpenDataServerLimit:30 offset:offset block:^(BOOL isSuccess, NSDictionary *result) {
-        if (isSuccess) {
-            [weakSelf.resultArray addObjectsFromArray:(NSArray *)result[@"result"][@"results"]];
-            weakSelf.page++;
-            [self->mainTableView reloadData];
-        } else {
-            NSLog(@"Something wrong");
-        }
-    }];
-}
+//#pragma mark - DemoManagerDelegate
+//- (void)finishAPIRequestResult:(NSArray *)resultArray {
+//    [_resultArray addObjectsFromArray:resultArray];
+//    [mainTableView reloadData];
+//}
 
 #pragma mark - UITableViewDelegate
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -64,7 +56,7 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row >= _resultArray.count - 1) {
-        [self requestFromAPIPage:_page];
+        [manager requestFromAPIPage:_page];
     }
 }
 

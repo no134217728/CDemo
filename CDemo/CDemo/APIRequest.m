@@ -7,6 +7,7 @@
 //
 
 #import "APIRequest.h"
+#import "APIModel.h"
 #import "AFNetworking.h"
 
 @implementation APIRequest

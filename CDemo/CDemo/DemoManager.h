@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+//@protocol DemoManagerDelegate <NSObject>
+//- (void)finishAPIRequestResult:(NSArray *)resultArray;
+//@end
+
 @interface DemoManager : NSObject
+- (void)requestFromAPIPage:(int)page;
+
+//@property (nonatomic, weak) id<DemoManagerDelegate> delegate;
 
 @end
+
+

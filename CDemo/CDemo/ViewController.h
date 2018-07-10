@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DemoManager.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource>
 

@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface APIModel : NSObject
+@interface APIModel : NSObject {
+    NSString *parkName;
+    NSString *parkDescription;
+    NSString *parkImageUrl;
+    UIImage *parkImage;
+}
+
+- (void)resultFromDict:(NSDictionary *)dict;
+
 
 @end

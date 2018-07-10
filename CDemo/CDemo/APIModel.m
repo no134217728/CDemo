@@ -10,4 +10,11 @@
 
 @implementation APIModel
 
+- (void)resultFromDict:(NSDictionary *)dict {
+    parkName = dict[@"ParkName"];
+    parkDescription = dict[@"Introduction"];
+    parkImageUrl = dict[@"Image"];
+//    parkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", dict[@"Image"]]]]];
+}
+
 @end
