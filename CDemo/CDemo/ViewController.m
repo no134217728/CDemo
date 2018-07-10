@@ -89,4 +89,22 @@
     NSLog(@"%f", y);
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (y < 117 && y > 59) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self->_constraintTableViewToButtons.constant = -117;
+            [self.view layoutIfNeeded];
+        }];
+        
+        y = 117;
+    } else if (y > 0 && y < 59) {
+        [UIView animateWithDuration:0.2 animations:^{
+            self->_constraintTableViewToButtons.constant = 0;
+            [self.view layoutIfNeeded];
+        }];
+        
+        y = 0;
+    }
+}
+
 @end
