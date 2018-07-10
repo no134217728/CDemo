@@ -10,6 +10,7 @@
 #import "MainTableViewCell.h"
 #import "APIRequest.h"
 #import "DemoManager.h"
+#import "APIModel.h"
 
 @interface ViewController () {
     DemoManager *manager;
@@ -23,6 +24,7 @@
     [super viewDidLoad];
     
     manager = [[DemoManager alloc] init];
+    manager.delegate = self;
     
     _resultArray = [[NSMutableArray alloc] init];
     _page = 0;
@@ -33,19 +35,21 @@
     [manager requestFromAPIPage:_page];
 }
 
-//#pragma mark - DemoManagerDelegate
-//- (void)finishAPIRequestResult:(NSArray *)resultArray {
-//    [_resultArray addObjectsFromArray:resultArray];
-//    [mainTableView reloadData];
-//}
+#pragma mark - DemoManagerDelegate
+- (void)finishAPIRequestResult {
+    _page++;
+    _resultArray = [manager fetchAPIData];
+    [mainTableView reloadData];
+}
 
 #pragma mark - UITableViewDelegate
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     MainTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cells"];
     
-    cell.parkName.text = [NSString stringWithFormat:@"公園：%@ %ld", _resultArray[indexPath.row][@"ParkName"], (long)indexPath.row];
-    cell.parkDescription.text = [NSString stringWithFormat:@"%@", _resultArray[indexPath.row][@"Introduction"]];
-//    cell.parkImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", _resultArray[indexPath.row][@"Image"]]]]];
+    APIModel *model = _resultArray[indexPath.row];
+    cell.parkName.text = [NSString stringWithFormat:@"%@ %ld", [model obtainParkName], indexPath.row];
+    cell.parkDescription.text = [model obtainParkDescription];
+//    cell.parkImage.image = [model obtainParkImage];
     
     return cell;
 }
@@ -56,8 +60,14 @@
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row >= _resultArray.count - 1) {
+        NSLog(@"%d", _page);
         [manager requestFromAPIPage:_page];
     }
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
 }
 
 @end

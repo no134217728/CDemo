@@ -11,7 +11,7 @@
 #import "APIRequest.h"
 
 APIRequest *api;
-APIModel *model;
+NSMutableArray *demoArray;
 
 @implementation DemoManager
 
@@ -20,7 +20,7 @@ APIModel *model;
     self = [super init];
     if (self) {
         api = [[APIRequest alloc] init];
-        model = [[APIModel alloc] init];
+        demoArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -30,12 +30,21 @@ APIModel *model;
     
     [api requestDemoDataFromOpenDataServerLimit:30 offset:offset block:^(BOOL isSuccess, NSDictionary *result) {
         if (isSuccess) {
-            [model resultFromDict:result];
-//            [self->_delegate finishAPIRequestResult:(NSArray *)result[@"result"][@"results"]];
+            NSArray *aryFromAPI = (NSArray *)result[@"result"][@"results"];
+            for (NSDictionary *dic in aryFromAPI) {
+                APIModel *model = [[APIModel alloc] init];
+                [model resultFromDict:dic];
+                [demoArray addObject:model];
+            }
+            [self.delegate finishAPIRequestResult];
         } else {
             NSLog(@"Something wrong");
         }
     }];
+}
+
+- (NSArray *)fetchAPIData {
+    return demoArray;
 }
 
 @end

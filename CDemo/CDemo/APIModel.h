@@ -17,6 +17,9 @@
 }
 
 - (void)resultFromDict:(NSDictionary *)dict;
-
+- (NSString *)obtainParkName;
+- (NSString *)obtainParkDescription;
+- (NSString *)obtainParkImageURL;
+- (UIImage *)obtainParkImage;
 
 @end

@@ -17,4 +17,20 @@
 //    parkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", dict[@"Image"]]]]];
 }
 
+- (NSString *)obtainParkName {
+    return parkName;
+}
+
+- (NSString *)obtainParkDescription {
+    return parkDescription;
+}
+
+- (NSString *)obtainParkImageURL {
+    return parkImageUrl;
+}
+
+- (UIImage *)obtainParkImage {
+    return parkImage;
+}
+
 @end

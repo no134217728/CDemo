@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "DemoManager.h"
 
-@interface ViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource, DemoManagerDelegate>
 
-@property NSMutableArray *resultArray;
+@property NSArray *resultArray;
 @property int page;
 
 @end
