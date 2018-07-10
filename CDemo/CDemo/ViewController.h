@@ -10,6 +10,7 @@
 #import "DemoManager.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UIScrollViewDelegate, UITableViewDataSource, DemoManagerDelegate>
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *constraintTableViewToButtons;
 
 @property NSArray *resultArray;
 @property int page;

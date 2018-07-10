@@ -132,6 +132,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="NaviBar" id="m1M-e5-RCq"/>
                     <connections>
+                        <outlet property="constraintTableViewToButtons" destination="os0-fb-LuE" id="76X-wg-nAR"/>
                         <outlet property="mainTableView" destination="j6I-F9-Gmg" id="SDo-Ef-Gd9"/>
                     </connections>
                 </viewController>

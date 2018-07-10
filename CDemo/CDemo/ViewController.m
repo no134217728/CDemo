@@ -13,6 +13,7 @@
 #import "APIModel.h"
 
 @interface ViewController () {
+    double y;
     DemoManager *manager;
     __weak IBOutlet UITableView *mainTableView;
 }
@@ -67,7 +68,25 @@
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    
+    if (scrollView.contentOffset.y > 0) {
+        if (y < 117) {
+            y = y + scrollView.contentOffset.y;
+            scrollView.contentOffset = CGPointZero;
+            _constraintTableViewToButtons.constant = MAX(-117, -y);
+        } else {
+            y = 117;
+        }
+    } else {
+        if (y > 0) {
+            y = y + scrollView.contentOffset.y;
+            scrollView.contentOffset = CGPointZero;
+            _constraintTableViewToButtons.constant = MAX(-117, -y);
+        } else {
+            y = 0;
+        }
+    }
+
+    NSLog(@"%f", y);
 }
 
 @end
