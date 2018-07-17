@@ -79,16 +79,10 @@
 			children = (
 				1AF7B24920F37B8B00719028 /* AppDelegate.h */,
 				1AF7B24A20F37B8B00719028 /* AppDelegate.m */,
-				1AF7B24C20F37B8B00719028 /* ViewController.h */,
-				1AF7B24D20F37B8B00719028 /* ViewController.m */,
-				1AF7B26720F3AD6800719028 /* MainTableViewCell.h */,
-				1AF7B26820F3AD6800719028 /* MainTableViewCell.m */,
-				20B321EC20F3C77D007C64F1 /* DemoManager.h */,
-				20B321ED20F3C77D007C64F1 /* DemoManager.m */,
-				1AF7B25F20F3900400719028 /* APIRequest.h */,
-				1AF7B26020F3900400719028 /* APIRequest.m */,
-				20B321E920F3C4C6007C64F1 /* APIModel.h */,
-				20B321EA20F3C4C6007C64F1 /* APIModel.m */,
+				20B991AD20FE030700FD6B1B /* MainScreen */,
+				20B991AE20FE032700FD6B1B /* Manager */,
+				20B991B020FE033800FD6B1B /* API */,
+				20B991AF20FE032F00FD6B1B /* Model */,
 				1AF7B24F20F37B8B00719028 /* Main.storyboard */,
 				1AF7B25220F37B9000719028 /* Assets.xcassets */,
 				1AF7B25420F37B9000719028 /* LaunchScreen.storyboard */,
@@ -96,6 +90,44 @@
 				1AF7B25820F37B9000719028 /* main.m */,
 			);
 			path = CDemo;
+			sourceTree = "<group>";
+		};
+		20B991AD20FE030700FD6B1B /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1AF7B24C20F37B8B00719028 /* ViewController.h */,
+				1AF7B24D20F37B8B00719028 /* ViewController.m */,
+				1AF7B26720F3AD6800719028 /* MainTableViewCell.h */,
+				1AF7B26820F3AD6800719028 /* MainTableViewCell.m */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		20B991AE20FE032700FD6B1B /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				20B321EC20F3C77D007C64F1 /* DemoManager.h */,
+				20B321ED20F3C77D007C64F1 /* DemoManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		20B991AF20FE032F00FD6B1B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20B321E920F3C4C6007C64F1 /* APIModel.h */,
+				20B321EA20F3C4C6007C64F1 /* APIModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20B991B020FE033800FD6B1B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1AF7B25F20F3900400719028 /* APIRequest.h */,
+				1AF7B26020F3900400719028 /* APIRequest.m */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		5EF536652315D642507105B6 /* Pods */ = {
