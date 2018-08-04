@@ -50,8 +50,19 @@
     APIModel *model = _resultArray[indexPath.row];
     cell.parkName.text = [NSString stringWithFormat:@"%@ %ld", [model obtainParkName], indexPath.row];
     cell.parkDescription.text = [model obtainParkDescription];
-//    cell.parkImage.image = [model obtainParkImage];
+    cell.parkImage.image = nil;
     
+    NSString *imageURL = [model obtainParkImageURL];
+    dispatch_queue_t queue = dispatch_queue_create("downloadFromUrl", nil);
+    dispatch_async(queue, ^{
+        if (!model.parkImage) {
+            model.parkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", imageURL]]]];
+        }
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.parkImage.image = [model obtainParkImage];
+        });
+    });
+
     return cell;
 }
 

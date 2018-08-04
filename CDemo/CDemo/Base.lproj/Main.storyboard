@@ -71,7 +71,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3DS-kl-XvC" userLabel="parkName">
-                                                    <rect key="frame" x="20" y="10" width="345" height="21"/>
+                                                    <rect key="frame" x="95" y="10" width="270" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="fmK-UZ-pPd"/>
                                                     </constraints>
@@ -80,16 +80,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="710-79-QTp" userLabel="parkDescription">
-                                                    <rect key="frame" x="20" y="41" width="345" height="100.5"/>
+                                                    <rect key="frame" x="95" y="41" width="270" height="100.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MZp-xJ-D1w">
-                                                    <rect key="frame" x="10" y="76" width="0.0" height="0.0"/>
+                                                    <rect key="frame" x="10" y="38.5" width="75" height="75"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="MZp-xJ-D1w" secondAttribute="height" multiplier="1:1" id="U00-HB-XPC"/>
-                                                        <constraint firstAttribute="width" id="d83-Nu-dci"/>
+                                                        <constraint firstAttribute="width" constant="75" id="d83-Nu-dci"/>
                                                     </constraints>
                                                 </imageView>
                                             </subviews>

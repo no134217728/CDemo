@@ -13,8 +13,9 @@
     NSString *parkName;
     NSString *parkDescription;
     NSString *parkImageUrl;
-    UIImage *parkImage;
 }
+
+@property UIImage *parkImage;
 
 - (void)resultFromDict:(NSDictionary *)dict;
 - (NSString *)obtainParkName;

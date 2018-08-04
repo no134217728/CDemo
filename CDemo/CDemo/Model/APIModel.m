@@ -14,7 +14,6 @@
     parkName = dict[@"ParkName"];
     parkDescription = dict[@"Introduction"];
     parkImageUrl = dict[@"Image"];
-//    parkImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@", dict[@"Image"]]]]];
 }
 
 - (NSString *)obtainParkName {
@@ -29,8 +28,8 @@
     return parkImageUrl;
 }
 
-- (UIImage *)obtainParkImage {
-    return parkImage;
+- (UIImage *)obtainParkImage {    
+    return _parkImage;
 }
 
 @end
