@@ -31,11 +31,21 @@ NSMutableArray *demoArray;
     [api requestDemoDataFromOpenDataServerLimit:30 offset:offset block:^(BOOL isSuccess, NSDictionary *result) {
         if (isSuccess) {
             NSArray *aryFromAPI = (NSArray *)result[@"result"][@"results"];
+            if (aryFromAPI.count == 0) {
+                   NSString *jsonStringFile = [[NSBundle mainBundle] pathForResource:@"StubParks" ofType:@"json"];
+                   if (jsonStringFile) {
+                       NSData *jsonData = [NSData dataWithContentsOfFile:jsonStringFile];
+                       NSDictionary *stubData = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+                       aryFromAPI = stubData[@"result"][@"results"];
+                   }
+            }
+            
             for (NSDictionary *dic in aryFromAPI) {
                 APIModel *model = [[APIModel alloc] init];
                 [model resultFromDict:dic];
                 [demoArray addObject:model];
             }
+            
             [self.delegate finishAPIRequestResult];
         } else {
             NSLog(@"Something wrong");

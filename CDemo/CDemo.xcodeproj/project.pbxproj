@@ -17,6 +17,7 @@
 		1AF7B26920F3AD6800719028 /* MainTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF7B26820F3AD6800719028 /* MainTableViewCell.m */; };
 		20B321EB20F3C4C6007C64F1 /* APIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B321EA20F3C4C6007C64F1 /* APIModel.m */; };
 		20B321EE20F3C77D007C64F1 /* DemoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B321ED20F3C77D007C64F1 /* DemoManager.m */; };
+		20CD11F2238552C5005BF225 /* StubParks.json in Resources */ = {isa = PBXBuildFile; fileRef = 20CD11F1238552C5005BF225 /* StubParks.json */; };
 		9E411F1629DBEC0AE406F626 /* libPods-CDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F60A10D06B442C0145A96E45 /* libPods-CDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		20B321EA20F3C4C6007C64F1 /* APIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIModel.m; sourceTree = "<group>"; };
 		20B321EC20F3C77D007C64F1 /* DemoManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DemoManager.h; sourceTree = "<group>"; };
 		20B321ED20F3C77D007C64F1 /* DemoManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemoManager.m; sourceTree = "<group>"; };
+		20CD11F1238552C5005BF225 /* StubParks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StubParks.json; sourceTree = "<group>"; };
 		90C98FAAEA7699CFA9800304 /* Pods-CDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-CDemo/Pods-CDemo.release.xcconfig"; sourceTree = "<group>"; };
 		C662779798B75C0821D0D256 /* Pods-CDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CDemo/Pods-CDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		F60A10D06B442C0145A96E45 /* libPods-CDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 		1AF7B24820F37B8B00719028 /* CDemo */ = {
 			isa = PBXGroup;
 			children = (
+				20CD11F1238552C5005BF225 /* StubParks.json */,
 				1AF7B24920F37B8B00719028 /* AppDelegate.h */,
 				1AF7B24A20F37B8B00719028 /* AppDelegate.m */,
 				20B991AD20FE030700FD6B1B /* MainScreen */,
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AF7B25620F37B9000719028 /* LaunchScreen.storyboard in Resources */,
+				20CD11F2238552C5005BF225 /* StubParks.json in Resources */,
 				1AF7B25320F37B9000719028 /* Assets.xcassets in Resources */,
 				1AF7B25120F37B8B00719028 /* Main.storyboard in Resources */,
 			);
